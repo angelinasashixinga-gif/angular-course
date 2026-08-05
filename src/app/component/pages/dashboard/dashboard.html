@@ -1,0 +1,18 @@
+<h1>Bem vindo ao dashboard</h1>
+<nav class="navbar">
+    <div class="login-container">
+
+    </div>
+<a routerLink="/esqueceu-se-da-senha"></a>
+</nav>
+<h3>Ola {{ name }}</h3>
+
+<button (click)="increase(2)">Aumentar</button>
+
+{{ counter }}
+
+@if(counter == 10){
+    <p>é 10</p>
+}@else {
+    <p>não é 10</p>
+}
