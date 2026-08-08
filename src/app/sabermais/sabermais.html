@@ -1,0 +1,33 @@
+
+
+<h3>{{ name }}</h3>
+
+<dl>
+    <dt>Nome:</dt>
+    <dd>{{ name() }}</dd>
+
+    <dt>Idade:</dt>
+    <dd>{{ age() }}</dd>
+
+    <dt>Método:</dt>
+    <dd>{{ getsabermaisDescription() }}</dd>
+
+    <dt>Genero:</dt>
+    <dd>{{ getgenderDescription() }}</dd>
+
+    <dt>Capitalizando:</dt>
+    <dd>{{ name() | uppercase }}</dd>
+
+</dl>
+
+ <ul>
+<li><button (click)="changeAge()" class="btn btn-primary">Mostar Idade</button></li>
+<li><button (click)="changename()" class="btn bth-primary">Mostar Nome</button></li>
+<li><button (click)="resetForm()" class="btn b tn-primary">Reset</button></li>
+</ul>
+
+<hr />
+<p>Título: {{ name () | titlecase }}</p>
+<hr />
+
+

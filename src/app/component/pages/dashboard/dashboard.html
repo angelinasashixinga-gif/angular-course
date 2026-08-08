@@ -1,18 +1,18 @@
-<h1>Bem vindo ao dashboard</h1>
-<nav class="navbar">
-    <div class="login-container">
 
-    </div>
-<a routerLink="/esqueceu-se-da-senha"></a>
-</nav>
+
 <h3>Ola {{ name }}</h3>
 
-<button (click)="increase(2)">Aumentar</button>
+<h1>Counter:{{ counter }}</h1>
+<h1>Counter Signal:{{ counterSignal() }}</h1>
+<hr />
 
-{{ counter }}
+<button (click)="increaseBY(5)">+1</button>
+<button (click)="increaseBY(-5)">-1</button>
+<button (click)="resetCounter()">Reset</button>
 
-@if(counter == 10){
-    <p>é 10</p>
-}@else {
-    <p>não é 10</p>
-}
+<h3><a routerLink="/sabermais">Saber Mais...</a></h3>
+
+<h1>{{ name }}</h1>
+
+<dl>
+    <dd>{{ name}}</dd>

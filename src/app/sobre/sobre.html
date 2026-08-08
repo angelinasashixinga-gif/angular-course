@@ -1,0 +1,51 @@
+<p>Sobre page</p>
+<hr />
+
+<section class="row">
+    <div class="col-12 col-sm-6">
+        <h2>Registrar:</h2>
+        <input
+         type="text" 
+         class="form-control" 
+         placeholder="Nome Completo"
+          />
+
+        <input type="nome"
+          class="form-control mt-2"
+          placeholder="Cargo" 
+          />
+
+    </div>
+    <div class="col-12 col-sm-6">
+        <h3>Listado</h3>
+        <ul>
+            @for (Character of characters(); track Character.id) {
+                <li>
+                    <span>{{ Character.name }}</span>
+                    <strong class="text-sobre">{{ Character.power }}</strong>
+                </li>
+            }
+
+        </ul>
+    </div>
+
+    <div class="col-12 col-sm-6">
+
+    <label for="cargo">Cargo:</label>
+
+<select id="cargo" class="form-control">
+  <option value="">Escolha um cargo</option>
+  <option value="tecnico">Técnico</option>
+  <option value="supervisor">Supervisor</option>
+  <option value="administrador">Administrador</option>
+  <option value="gestor">Gestor</option>
+</select>
+    </div>
+
+    <button class="mt-2 btn bth-primary">
+        Guardar
+    </button>
+     
+   
+
+</section>

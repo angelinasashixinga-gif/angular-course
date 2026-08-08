@@ -1,0 +1,33 @@
+<style>
+    nav {
+        display: flex;
+        justify-content: space-around;
+        background-color: rgb(173, 173, 226);
+        color: white;
+        padding: 10px;
+    }
+
+    nav a {
+        color: rgb(6, 6, 6);
+        text-decoration: none;
+        font-size: 20px;
+    }
+
+    a.active {
+        font-weight: bold;
+        background-color: brown;
+        text-decoration: underline;
+        
+    }
+
+</style>
+
+<nav>
+    <a routerLink="/" routerLinkActive="active">Voltar</a>
+
+    <a routerLink="/dashboard" routerLinkActive="active">Contador</a>
+
+    <a routerLink="/sabermais" routerLinkActive="active">Herói</a>
+
+    <a routerLink="/sobre" routerLinkActive="active">Sobre</a>
+</nav>
