@@ -1,10 +1,9 @@
 import { TitleCasePipe, UpperCasePipe } from '@angular/common';
 import { Component, computed, signal } from '@angular/core';
-import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-sabermais',
-  imports: [RouterLink, UpperCasePipe, TitleCasePipe],
+  imports: [UpperCasePipe, TitleCasePipe],
   templateUrl: './sabermais.html',
   styleUrl: './sabermais.css',
 })
@@ -13,11 +12,14 @@ export class Sabermais {
   name = signal('Lina');
   age = signal(45);
   gender = signal('female');
+  nome2 = "Ange"  
+  
 
   sabermaisDesciption = computed(() => {
     const description = `${this.name()} - ${this.age}`;
     return description;
   })
+
   capilizedName = computed(() => this.name().toUpperCase);
 
   getsabermaisDescription() {
@@ -31,7 +33,7 @@ export class Sabermais {
   }
 
   changeAge() {
-    this.age.set(68)
+    this.age.set(68);
   }
 
   resetForm() {
@@ -46,5 +48,8 @@ export class Sabermais {
       return this.gender();
     }
   
+   change_name(){
+    this.nome2 = 'Bernado';
+   }
     
 }
