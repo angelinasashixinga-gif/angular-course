@@ -7,6 +7,7 @@ import { Sabermais } from './sabermais/sabermais';
 import { Contador } from './contador/contador';
 import { Heroi } from './heroi/heroi';
 import { Sobre } from './sobre/sobre';
+import { Tick } from './tick/tick';
 
 export const routes: Routes = [
     {
@@ -36,5 +37,9 @@ export const routes: Routes = [
     {
         path: 'sobre',
         component: Sobre
+    },
+    {
+        path: 'tick',
+        component: Tick
     }
 ];
