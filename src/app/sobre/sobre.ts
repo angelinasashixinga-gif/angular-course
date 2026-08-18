@@ -17,6 +17,8 @@ interface Character {
 })
 export class Sobre {
 
+  name = signal('Carlos');
+  cargo = signal('100');
 
   characters = signal<Character[]>([
     { id: 1, name: 'Angelina', power: 9001 },

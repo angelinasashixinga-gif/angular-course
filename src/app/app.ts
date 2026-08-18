@@ -14,8 +14,19 @@ import { Navbar } from './navbar/navbar';
   styleUrl: './app.css'
 })
 export class App {
+
+  name = "Bernardo sacuendi";
+
+  name2 = 'Bernardo sacuendi';
+
+name3 = `Bernardo 
+
+sacuendi`;
+
+
+
   protected readonly title = signal('condition');
-  
+
   constructor(public router: Router) {}
 
 }

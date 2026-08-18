@@ -3,17 +3,14 @@
 
 <section class="row">
     <div class="col-12 col-sm-6">
-        <h2>Registrar:</h2>
-        <input
-         type="text" 
-         class="form-control" 
-         placeholder="Nome Completo"
-          />
+        <h2>Registrar: {{ name() }}</h2>
 
-        <input type="nome"
-          class="form-control mt-2"
-          placeholder="Cargo" 
-          />
+        <input type="text" class="form-control" 
+        placeholder="Nome Completo" [value]="name()"
+        (change)="name.set(txtName.value)" #txtName />
+        <h2>{{ cargo() }}</h2>  
+
+        <input type="nome" class="form-control mt-2" placeholder="Cargo"   />
 
     </div>
     <div class="col-12 col-sm-6">
