@@ -3,11 +3,12 @@ import { Routes } from '@angular/router';
 import { Login } from './login/login';
 import { Dashboard } from './component/pages/dashboard/dashboard';
 import { EsqueceuSeDaSenha } from './esqueceu-se-da-senha/esqueceu-se-da-senha';
-import { Sabermais } from './sabermais/sabermais';
+import { Sabermais } from './Hero1/DragonBallPage';
 import { Contador } from './contador/contador';
 import { Heroi } from './heroi/heroi';
-import { Sobre } from './sobre/sobre';
+import { dragonballPage } from './dragonBall/dragonball-page';
 import { Tick } from './tick/tick';
+import { dragonballSuperPageComponent } from './DragonBall-super copy/dragonball-super-page.component';
 
 export const routes: Routes = [
     {
@@ -36,7 +37,11 @@ export const routes: Routes = [
     },
     {
         path: 'sobre',
-        component: Sobre
+        component: dragonballPage
+    },
+     {
+        path: 'dragonball-super',
+        component: dragonballSuperPageComponent
     },
     {
         path: 'tick',

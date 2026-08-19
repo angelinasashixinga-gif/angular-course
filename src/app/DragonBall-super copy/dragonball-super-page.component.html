@@ -1,20 +1,31 @@
-<p>Sobre page</p>
+<p>DragonBallPage</p>
 <hr />
 
 <section class="row">
     <div class="col-12 col-sm-6">
         <h2>Registrar: {{ name() }}</h2>
 
-        <input type="text" class="form-control" 
-        placeholder="Nome Completo" [value]="name()"
-        (change)="name.set(txtName.value)" #txtName />
-        <h2>{{ cargo() }}</h2>  
+        <input type="text"
+         class="form-control" 
+        placeholder="Nome Completo"
+         [value]="name()"
+        (change)="name.set(txtName.value)"
+        (input)="name.set(txtName.value)"
+         #txtName />
 
-        <input type="nome" class="form-control mt-2" placeholder="Cargo"   />
+        <h3>{{ power() }}</h3>  
+
+        <input
+         type="number" 
+        class="form-control mt-2" 
+        placeholder="Poder"
+        [value]="power()" 
+        (input)="power.set(+txtPower.value)"
+        #txtPower />
 
     </div>
     <div class="col-12 col-sm-6">
-        <h3>Listado</h3>
+        <h3>Listado fuertes</h3>
         <ul>
         
             @for (Character of characters(); track Character.id; let idx = $index) {
@@ -55,8 +66,8 @@
 </select>
     </div>
 
-    <button class="mt-2 btn bth-primary">
-        Guardar
+    <button (click)="addCharacter()" class=" btn bth-primary">
+        Agregar
     </button>
      
    

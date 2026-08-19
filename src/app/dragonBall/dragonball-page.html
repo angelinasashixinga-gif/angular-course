@@ -1,0 +1,75 @@
+<p>DragonBallPage</p>
+<hr />
+
+<section class="row">
+    <div class="col-12 col-sm-6">
+        <h2>Registrar: {{ name() }}</h2>
+
+        <input type="text"
+         class="form-control" 
+        placeholder="Nome Completo"
+         [value]="name()"
+        (change)="name.set(txtName.value)"
+        (input)="name.set(txtName.value)"
+         #txtName />
+
+        <h3>{{ power() }}</h3>  
+
+        <input
+         type="number" 
+        class="form-control mt-2" 
+        placeholder="Poder"
+        [value]="power()" 
+        (input)="power.set(+txtPower.value)"
+        #txtPower />
+
+    </div>
+    <div class="col-12 col-sm-6">
+        <h3>Listado fuertes</h3>
+        <ul>
+        
+            @for (Character of characters(); track Character.id; let idx = $index) {
+
+                @if( Character.power > 500 ) {
+
+                <li>
+                    <span>{{ idx }} - {{ Character.name }}</span>
+                    <strong
+                    /* [ngClass]="powerClasse()"> */
+                    
+                    [class.text-danger]="Character.power > 9000"
+                    [class.text-primary]="Character.power < 9000"
+                    > 
+                    
+                        ({{ Character.power }})</strong>
+                       
+                </li>
+            } @else {
+                <li><strong>Sem nada para ver</strong></li>
+            }
+        }
+
+
+        </ul>
+    </div>
+
+    <div class="col-12 col-sm-6">
+
+    <label for="cargo">Cargo:</label>
+
+<select id="cargo" class="form-control">
+  <option value="">Escolha um cargo</option>
+  <option value="tecnico">Técnico</option>
+  <option value="supervisor">Supervisor</option>
+  <option value="administrador">Administrador</option>
+  <option value="gestor">Gestor</option>
+</select>
+    </div>
+
+    <button (click)="addCharacter()" class=" btn bth-primary">
+        Agregar
+    </button>
+     
+   
+
+</section>

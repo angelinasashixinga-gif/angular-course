@@ -4,12 +4,12 @@ import { Component, computed, signal } from '@angular/core';
 @Component({
   selector: 'app-sabermais',
   imports: [UpperCasePipe, TitleCasePipe],
-  templateUrl: './sabermais.html',
-  styleUrl: './sabermais.css',
+  templateUrl: './DragonBallPage.html',
+  styleUrl: './DragonBallPage.css',
 })
 export class Sabermais {
 
-  name = signal('Lina');
+  name = signal('Ironman');
   age = signal(45);
   gender = signal('female');
   nome2 = "Ange"  
@@ -37,7 +37,7 @@ export class Sabermais {
   }
 
   resetForm() {
-    this.name.set( 'Angeliana' )
+    this.name.set( 'ironman' )
     this.age.set(45)
     this.gender.set( 'female' )
   }

@@ -3,7 +3,7 @@ import { Router, RouterOutlet } from '@angular/router';
 import { Login } from './login/login';
 import { Dashboard } from './component/pages/dashboard/dashboard';
 import { EsqueceuSeDaSenha } from './esqueceu-se-da-senha/esqueceu-se-da-senha';
-import { Sabermais } from './sabermais/sabermais';
+import { Sabermais } from './Hero1/DragonBallPage';
 import { Navbar } from './navbar/navbar';
 
 

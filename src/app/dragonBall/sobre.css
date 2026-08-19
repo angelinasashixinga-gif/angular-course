@@ -1,0 +1,16 @@
+input {
+  display: block;
+  padding: 5px;
+  width: 50%;
+  margin-bottom: 10px;
+}
+label {
+    text-align: left;
+    margin-bottom: 5px;
+
+}
+button {
+    margin: 15px;
+    background-color: rgb(142, 142, 235);
+    border-radius: 3px;
+}
