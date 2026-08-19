@@ -1,0 +1,32 @@
+<p>Character-list works!</p>
+
+        <h3>Listado fuertes</h3>
+        <ul>
+        
+            @for (Character of characters(); track Character.id; let idx = $index) {
+
+                @if( Character.power > 500 ) {
+
+                <li>
+                    <span>{{ idx }} - {{ Character.name }}</span>
+                    <strong
+                    /* [ngClass]="powerClasse()"> */
+                    
+                    [class.text-danger]="Character.power > 9000"
+                    [class.text-primary]="Character.power < 9000"
+                    > 
+                    
+                        ({{ Character.power }})</strong>
+                       
+                </li>
+            } @else {
+                <li><strong>Sem nada para ver</strong></li>
+            }
+        }
+        </ul>
+    
+
+
+    
+   
+ 

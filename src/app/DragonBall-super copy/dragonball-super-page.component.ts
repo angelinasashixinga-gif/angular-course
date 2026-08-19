@@ -1,18 +1,16 @@
 import { Component, computed, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { NgClass } from "@angular/common";
+import { CharacterListComponent } from "../component/dragonball/character-list/character-list.component";
+import type { Character } from '../interfaces/character.interface';
 
-interface Character {
-  id: number;
-  name: string;
-  power: number;
 
-}
 
 @Component({
   templateUrl: './dragonball-super-page.component.html',
   styleUrl: './sobre.css',
   selector: 'drangonball-super',
+  imports: [CharacterListComponent],
 })
 export class dragonballSuperPageComponent {
 

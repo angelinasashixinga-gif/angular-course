@@ -1,19 +1,15 @@
 import { Component, computed, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { NgClass } from "@angular/common";
+import type { Character } from '../interfaces/character.interface';
 
-interface Character {
-  id: number;
-  name: string;
-  power: number;
 
-}
 
 @Component({
   templateUrl: './dragonball-page.html',
   styleUrl: './sobre.css',
 })
-export class dragonballPage {
+export class DragonballPage {
 
   name = signal('');
   power = signal(0);

@@ -25,51 +25,5 @@
 
     </div>
     <div class="col-12 col-sm-6">
-        <h3>Listado fuertes</h3>
-        <ul>
-        
-            @for (Character of characters(); track Character.id; let idx = $index) {
+        <dragonball-character-list [characters]="characters()" />
 
-                @if( Character.power > 500 ) {
-
-                <li>
-                    <span>{{ idx }} - {{ Character.name }}</span>
-                    <strong
-                    /* [ngClass]="powerClasse()"> */
-                    
-                    [class.text-danger]="Character.power > 9000"
-                    [class.text-primary]="Character.power < 9000"
-                    > 
-                    
-                        ({{ Character.power }})</strong>
-                       
-                </li>
-            } @else {
-                <li><strong>Sem nada para ver</strong></li>
-            }
-        }
-
-
-        </ul>
-    </div>
-
-    <div class="col-12 col-sm-6">
-
-    <label for="cargo">Cargo:</label>
-
-<select id="cargo" class="form-control">
-  <option value="">Escolha um cargo</option>
-  <option value="tecnico">Técnico</option>
-  <option value="supervisor">Supervisor</option>
-  <option value="administrador">Administrador</option>
-  <option value="gestor">Gestor</option>
-</select>
-    </div>
-
-    <button (click)="addCharacter()" class=" btn bth-primary">
-        Agregar
-    </button>
-     
-   
-
-</section>

@@ -6,7 +6,7 @@ import { EsqueceuSeDaSenha } from './esqueceu-se-da-senha/esqueceu-se-da-senha';
 import { Sabermais } from './Hero1/DragonBallPage';
 import { Contador } from './contador/contador';
 import { Heroi } from './heroi/heroi';
-import { dragonballPage } from './dragonBall/dragonball-page';
+import { DragonballPage } from './dragonBall/dragonball-page';
 import { Tick } from './tick/tick';
 import { dragonballSuperPageComponent } from './DragonBall-super copy/dragonball-super-page.component';
 
@@ -37,7 +37,7 @@ export const routes: Routes = [
     },
     {
         path: 'sobre',
-        component: dragonballPage
+        component: DragonballPage
     },
      {
         path: 'dragonBallSuper',
