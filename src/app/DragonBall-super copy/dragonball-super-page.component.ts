@@ -3,6 +3,7 @@ import { RouterLink } from '@angular/router';
 import { NgClass } from "@angular/common";
 import { CharacterListComponent } from "../component/dragonball/character-list/character-list.component";
 import type { Character } from '../interfaces/character.interface';
+import { CharacterAddComponet } from '../dragonBall/Character-app/Character-add.componet';
 
 
 
@@ -10,11 +11,11 @@ import type { Character } from '../interfaces/character.interface';
   templateUrl: './dragonball-super-page.component.html',
   styleUrl: './sobre.css',
   selector: 'drangonball-super',
-  imports: [CharacterListComponent],
+  imports: [CharacterListComponent, CharacterAddComponet],
 })
 export class dragonballSuperPageComponent {
 
-  name = signal('Carlos');
+  name = signal('');
   power = signal(100);
 
   characters = signal<Character[]>([
