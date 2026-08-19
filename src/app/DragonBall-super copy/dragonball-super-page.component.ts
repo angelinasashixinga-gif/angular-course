@@ -12,6 +12,7 @@ interface Character {
 @Component({
   templateUrl: './dragonball-super-page.component.html',
   styleUrl: './sobre.css',
+  selector: 'drangonball-super',
 })
 export class dragonballSuperPageComponent {
 
