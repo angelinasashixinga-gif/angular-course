@@ -3,7 +3,7 @@ import { RouterLink } from '@angular/router';
 import { NgClass } from "@angular/common";
 import { CharacterListComponent } from "../component/dragonball/character-list/character-list.component";
 import type { Character } from '../interfaces/character.interface';
-import { CharacterAddComponet } from '../dragonBall/Character-app/Character-add.componet';
+import { CharacterAddComponet } from '../dragonBall/Character-add/Character-add.componet';
 
 
 
@@ -25,21 +25,10 @@ export class dragonballSuperPageComponent {
   ]);
 
 
-addCharacter() {
-
-  if (!this.name() || !this.power() || this.power() <=  6) {
-    return;
-  }
-  const newCharacter:Character = {
-    id: this.characters().length + 1,
-    name: this.name(),
-    power: this.power(),
-  };
-
-  this.characters.update(
-    (list) => [...list, newCharacter]);
-    this.resetFields();
-
+addCharacter(character: Character) {
+this.characters.update(
+  list => [...list, character]
+)
 }
 resetFields() {
   this.name.set('');
