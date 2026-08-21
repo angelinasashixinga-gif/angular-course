@@ -44,4 +44,5 @@ resetFields() {
   this.name.set('');
   this.power.set(0);
 }
+
 }

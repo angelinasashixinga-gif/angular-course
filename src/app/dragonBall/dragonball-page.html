@@ -22,10 +22,15 @@
         [value]="power()" 
         (input)="power.set(+txtPower.value)"
         #txtPower />
+        
+
 
     </div>
     <div class="col-12 col-sm-6">
         <h3>Listado fuertes</h3>
-        
+           <button (click)="addCharacter()"
+    class="mt-2" btn-primary>Agregar</button>
+    </div>
+
         
           
