@@ -10,7 +10,10 @@ export class DrangonballService  {
     { id: 2, name: 'Vegeta', power: 8000 },
   ]);
 
-  /* saveToLocalStorage = effect() */
+   saveToLocalStorage = effect( () => {
+    /* console.log('Character count ${this.characters.length}'); */
+    localStorage.setItem('character', JSON.stringify(this.characters()));
+   })
 
 addCharacter(character: Character) {
 this.characters.update(
