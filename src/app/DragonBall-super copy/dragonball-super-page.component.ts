@@ -15,6 +15,7 @@ import { DrangonballService } from '../service/dragonball.service';
   imports: [CharacterListComponent, CharacterAddComponet],
 })
 export class dragonballSuperPageComponent {
+  
 
 public dragonballService = inject (DrangonballService);
 
