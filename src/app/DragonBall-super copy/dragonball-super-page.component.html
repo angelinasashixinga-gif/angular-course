@@ -13,10 +13,19 @@
         listName="Lista de Personagens"
          [characters]="dragonballService.characters()" />
 
+          <ul>
+            @for (character of characters(); track character.id; let idx = $index) {
+                <li>
+                    <span>{{ idx + 1}} - {{ character.name }}</span>
+                    <strong class="text-danger">({{ character.power }})</strong>
+                </li>
+            }
+         </ul>
 
-        <!-- <button (click)="addCharacter()"
+
+        <button (click)="addCharacter()"
     class="mt-2" btn-primary>Agregar</button>
-    </div> -->
+    </div>
 
 
 
